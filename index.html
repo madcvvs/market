@@ -33,7 +33,7 @@
           </div>
         </div>
 		<div class="login-box">
-      <div class="hide-login-btn"><i>&#10006;</i></div>
+      <div class="hide-login-btn"><i id="cross" class="fas fa-times-circle"></i></div>
     <form class="login-form" method="post" action="index.php" autocomplete="off">
 
       <h1>Welcome</h1>
@@ -60,7 +60,7 @@
     $( document ).ready(function() {
     $.getJSON("https://api.coindesk.com/v1/bpi/currentprice/SEK.json", function( data ) {
       var test = data.bpi.SEK.rate;
-      $( "#bitcoin" ).html( test );
+      $( "#bitcoin" ).html( "<i class=\"fab fa-btc\"></i> = " + test + " SEK");
     });
     });
 

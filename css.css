@@ -17,6 +17,15 @@ body{
   color: white;
 }
 
+#cross {
+  font-size: 30px;
+}
+
+.fa-btc {
+  margin-left: 10px;
+  color: #a56a00;
+}
+
 #header h1 i {
   margin-left: 10px;
   color: #b9b3b3;
