@@ -12,6 +12,15 @@
 	</div>
 
 	<div id="content">
+      <div class="eyes">
+          <div class="eye">
+            <div class="ball"></div>
+          </div>
+      
+          <div class="eye">
+            <div class="ball"></div>
+          </div>
+        </div>
 		<div class="login-box">
       <div class="hide-login-btn"><i>&#10006;</i></div>
     <form class="login-form" method="post" action="index.php" autocomplete="off">
@@ -35,6 +44,26 @@
     $(".hide-login-btn").on("click",function(){
       $(".login-box").toggleClass("showed");
     });
+
+    //eyeballs
+    var balls = document.getElementsByClassName("ball");
+  document.onmousemove = function(){
+    var x = event.clientX * 100 / window.innerWidth + "%";
+    var y = event.clientY * 100 / window.innerHeight + "%";
+    //event.clientX => get the horizontal coordinate of the mouse
+    //event.clientY => get the Vertical coordinate of the mouse
+    //window.innerWidth => get the browser width
+    //window.innerHeight => get the browser height
+
+    for(var i=0;i<2;i++){
+      balls[i].style.left = x;
+      balls[i].style.top = y;
+      balls[i].style.transform = "translate(-"+x+",-"+y+")";
+    }
+  }
+    //end of eyeballs
+
+
     </script>
 </body>
 </html>
