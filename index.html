@@ -35,6 +35,7 @@
 	</div>
 
 	<div id="footer">
+    <h1 id="bitcoin"></h1>
 	</div>
 
 
@@ -45,6 +46,14 @@
     $(".hide-login-btn").on("click",function(){
       $(".login-box").toggleClass("showed");
     });
+
+    $( document ).ready(function() {
+    $.getJSON("https://api.coindesk.com/v1/bpi/currentprice/SEK.json", function( data ) {
+      var test = data.bpi.SEK.rate;
+      $( "#bitcoin" ).html( test );
+    });
+    });
+
 
     //eyeballs
     var balls = document.getElementsByClassName("ball");
