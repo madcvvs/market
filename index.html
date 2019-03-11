@@ -57,12 +57,17 @@
       $(".login-box").toggleClass("showed");
     });
 
+    setInterval("my_function();",5000); 
+
     $( document ).ready(function() {
+      my_function();
+    });
+
+    function my_function(){
     $.getJSON("https://api.coindesk.com/v1/bpi/currentprice/SEK.json", function( data ) {
       var test = data.bpi.SEK.rate;
       $( "#bitcoin" ).html( "<i class=\"fab fa-btc\"></i> = " + test + " SEK");
-    });
-    });
+    });}
 
 
     //eyeballs
