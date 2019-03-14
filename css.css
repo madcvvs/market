@@ -135,6 +135,9 @@ body{
   border-radius: 50%;
   border: 15px solid #222;
 }
+
+
+/* Sökknapp */
 .sok{
 	left: 50%;
 	top: 5%;
