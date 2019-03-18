@@ -206,7 +206,7 @@ body{
 .mouth{
   width:400px;
   height:400px;
-  background:white;
+  background:red;
   position: absolute;
   top: 70%;
   left: 50%;
@@ -218,7 +218,7 @@ body{
 .shut{
   width: 600px;
   height: 320px;
-  background: black;
+  background: #222222;
   position: absolute;
   top: 70%;
   left: 50%;
