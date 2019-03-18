@@ -96,7 +96,11 @@ body{
 }
 .show-login-btn{
   position: absolute;
+<<<<<<< HEAD
   left:89%;
+=======
+  left: 89%;
+>>>>>>> 02c1c59ca2a38c5d53f1ebf5092d01d716f1980f
   top:5vh;
   color: white;
   border: 2px solid;
