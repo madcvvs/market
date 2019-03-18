@@ -57,6 +57,7 @@ body{
   transform: translate(-50%,-50%);
   color: white;
   text-align: center;
+	max-width: 20vh;
 }
 .login-form h1{
   font-weight: 400;
@@ -101,6 +102,16 @@ body{
   border: 2px solid;
   padding: 10px;
   cursor: pointer;
+}
+.sign-up-btn {
+	width: 240px;
+  background: #2c3e50;
+  border: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+	margin-top: 1vh;
 }
 .showed{
   left: 0;
