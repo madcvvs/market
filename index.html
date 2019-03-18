@@ -84,8 +84,48 @@
 
     function my_function(){
     $.getJSON("https://api.coindesk.com/v1/bpi/currentprice/SEK.json", function( data ) {
-      var test = data.bpi.SEK.rate;
-      $( "#bitcoin" ).html( "<i class=\"fab fa-btc\"></i> = " + test + " SEK");
+      
+
+
+      //BEFORE
+      var btcBeforeCheckvalue = $( "#valuebtc" ).text();
+
+      var btcBeforeCheckvalue =  btcBeforeCheckvalue.split('.').join("");
+      var btcBeforeCheckvalue = btcBeforeCheckvalue.split(',').join("");
+
+      var btcValueBefore = parseInt(btcBeforeCheckvalue);
+
+      console.log("Before " + btcValueBefore);
+
+      //END OF BEFORE
+
+
+      var btcValue = data.bpi.SEK.rate;
+
+      var btcValueCheck = btcValue;
+      //CONVERT 'AFTER' FOR CHECK
+
+      var btcValueCheck =  btcValueCheck.split('.').join("");
+      var btcValueCheck = btcValueCheck.split(',').join("");
+      var btcValueCheck = parseInt(btcValueCheck);
+
+      console.log("After " + btcValueCheck);
+
+      //FLASHES GREEN OR RED DEPENDING ON IF IT GOES UP OR DOWN
+      if(btcValueCheck > btcValueBefore){
+      	$( "#bitcoin" ).css("color", "green")
+
+      	setInterval(function(){ $( "#bitcoin" ).css("color", "black"); }, 1000);
+
+      }else if (btcValueCheck < btcValueBefore){
+      	$( "#bitcoin" ).css("color", "red")
+
+      	setInterval(function(){ $( "#bitcoin" ).css("color", "black"); }, 1000);
+      }
+
+
+
+      $( "#bitcoin" ).html( "<i class=\"fab fa-btc\"></i> = <span id='valuebtc'>" + btcValue + "</span> SEK");
     });}
 
 
