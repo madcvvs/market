@@ -119,7 +119,7 @@ body{
 
 .eyes{
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
@@ -204,8 +204,8 @@ body{
 }
 
 .mouth{
-  width:200px;
-  height:200px;
+  width:400px;
+  height:400px;
   background:white;
   position: absolute;
   top: 70%;
@@ -216,8 +216,8 @@ body{
 }
 
 .shut{
-  width: 300px;
-  height: 160px;
+  width: 600px;
+  height: 320px;
   background: black;
   position: absolute;
   top: 70%;
@@ -245,6 +245,15 @@ body{
   transition: 0.4s all;
 }
 
+.shut img{
+  display: block;
+  width: 100%;
+  height: 0%;
+  background: rgb(0, 0, 0);
+  transition: 0.4s all;
+}
+
+
 
 .shut .lip2{
   display: block;
@@ -262,4 +271,8 @@ body{
 
 .mouth:hover > .shut .pusher{
   height: 60%;
+}
+
+.mouth:hover > .shut img{
+  height: 100%;
 }
