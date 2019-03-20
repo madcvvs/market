@@ -21,8 +21,7 @@ body{
 	background-image: url(water.png);
 	-webkit-background-clip:text;
   animation: water 15s infinite;  
-  
-
+  animation-timing-function: linear;
   -webkit-text-stroke-color: red;
   -webkit-text-stroke-width: 2.00px; 
 }
@@ -31,8 +30,20 @@ body{
 	from{
 		background-position: left 0 top -20px;
 	}
-	to{
-		background-position: left 1000px top -20px;
+
+  10% {background-position: left 120px top -20px;}
+  20% {background-position: left 240px top -20px;}
+  30% {background-position: left 360px top -20px;}
+  40% {background-position: left 480px top -20px;}
+  50% {background-position: left 600px top -20px;}
+  60% {background-position: left 720px top -20px;}
+  70% {background-position: left 840px top -20px;}
+  80% {background-position: left 960px top -20px;}
+  90% {background-position: left 1080px top -20px;}
+	
+
+  to{
+		background-position: left 1200px top -20px;
 	}
 }
 
