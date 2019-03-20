@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Market.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -21,6 +22,8 @@
    </a>
   </div>
 	</div>
+
+	<p id="timetosale">  </p>
 
 	<div id="content">
       <div class="eyes">
@@ -88,8 +91,32 @@
     }
   }
     //end of eyeballs
+		</script>
+		<script>
+		// Vilket datum som rean ska börja
+		var countDownDate = new Date("Jan 5, 2020 00:00:00").getTime();
 
+		var x = setInterval(function() {
 
-    </script>
+		  var now = new Date().getTime();
+
+		  var distance = countDownDate - now;
+
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		  document.getElementById("timetosale").innerHTML = days + "d " + hours + "h "
+		  + minutes + "m " + seconds + "s " + "until next sale";
+
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("timetosale").innerHTML = "The sale has expired";
+		  }
+		}, 1000);
+		</script>
+
+</script>
 </body>
 </html>
