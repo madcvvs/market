@@ -45,7 +45,7 @@
         <div class="mouth">
           <div class="shut">
             <span class="lip1"></span>
-            <span class="pusher"><img src="kujuk.jpg"></span>
+            <span class="pusher"><img id="imageKujuk" src="kujuk.jpg"></span>
             <span class="lip2"></span>
           </div>
           <div class="ball">
@@ -76,7 +76,32 @@
 	</div>
 
 
+
     <script type="text/javascript">
+
+
+      
+  $( ".mouth" ).hover(
+  function() {
+    
+    var number = 1 + Math.floor(Math.random() * 3);
+
+    if (number == 1){
+      $( "#imageKujuk" ).attr("src","water.png");
+    }else if(number == 2){
+      $( "#imageKujuk" ).attr("src","meny.png");
+    }else if(number == 3){
+      $( "#imageKujuk" ).attr("src","kujuk.jpg");
+    }
+  }
+);
+
+
+
+
+
+
+
     $(".show-login-btn").on("click",function(){
       $(".login-box").toggleClass("showed");
     });
