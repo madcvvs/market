@@ -14,8 +14,29 @@ body{
 	height: 15vh;
 }
 #header h1 {
-  color: white;
+	font-size: 60px;
+	text-transform: uppercase;
+  font-weight: 900;
+	color: #2c3e5036;
+	background-image: url(water.png);
+	-webkit-background-clip:text;
+  animation: water 15s infinite;  
+  
+
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 2.00px; 
 }
+
+@keyframes water {
+	from{
+		background-position: left 0 top -20px;
+	}
+	to{
+		background-position: left 1000px top -20px;
+	}
+}
+
+
 
 #cross {
   font-size: 30px;
