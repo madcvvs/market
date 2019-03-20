@@ -202,7 +202,10 @@ body{
  width: 0px;
  font-weight: bold;
 }﻿
-
+#bitcoin {
+	margin: 0;
+	max-width: 50%;
+}
 p {
 	margin-top: 0%;
   font-size: 25px;
