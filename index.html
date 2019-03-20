@@ -80,7 +80,44 @@
     <script type="text/javascript">
 
 
-      
+
+    var timeoutId;
+    $(".shut").hover(function() {
+        if (!timeoutId) {
+            timeoutId = window.setTimeout(function() {
+                timeoutId = null;
+                
+                var number = 1 + Math.floor(Math.random() * 3);
+                $("#imageKujuk").css("display", "block");
+
+    			if (number == 1){
+    			  $( "#imageKujuk" ).attr("src","water.png");
+    			}else if(number == 2){
+    			  $( "#imageKujuk" ).attr("src","meny.png");
+    			}else if(number == 3){
+    			  $( "#imageKujuk" ).attr("src","kujuk.jpg");
+    			}
+
+
+           }, 100);
+        }
+    },
+    function () {
+        if (timeoutId) {
+            window.clearTimeout(timeoutId);
+            timeoutId = null;
+        }
+        else {
+           $( "#imageKujuk" ).removeAttr("src");
+           $("#imageKujuk").css("display", "none");
+        }
+    });
+
+
+
+
+
+      /*
   $( ".shut" ).hover(
   function() {
     
@@ -96,7 +133,7 @@
   }
 );
 
-
+*/
 
 
 
