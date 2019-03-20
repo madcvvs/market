@@ -212,7 +212,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 75% 0;
-  
+
 }
 
 .shut{
@@ -287,4 +287,52 @@ body{
 
 .mouth:hover > .shut img{
   height: 100%;
+}
+
+/*Hat */
+.container{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotateX(70deg);
+}
+.ripple{
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+
+  width: 60px;
+  height: 20px;
+  border-radius: 50%;
+  animation: ripple 2s linear infinite;
+}
+.r2{
+  animation-delay: 0.8s;
+}
+.r3{
+  animation-delay: 1.6s;
+}
+.r4{
+  animation-delay: 2.4s;
+}
+.r5{
+  animation-delay: 3.2s;
+}
+.r6{
+  animation-delay: 4s;
+}
+
+@keyframes ripple {
+  from{
+    border: 4px solid #8e44ad;
+    background: #9b59b670;
+  }
+  to{
+    border: 0px solid #8e44ad;
+    background: #9b59b670;
+    width: 400px;
+    height: 400px;
+    top: 20px;
+    opacity: 0;
+  }
 }
