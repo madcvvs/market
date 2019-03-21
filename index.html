@@ -42,16 +42,11 @@
         </div>
 
 
-        <div class="mouth">
           <div class="shut">
             <span class="lip1"></span>
             <span class="pusher"><img id="imageKujuk"></span>
             <span class="lip2"></span>
           </div>
-          <div class="ball">
-
-          </div>
-        </div>
 
 
 
@@ -88,7 +83,8 @@
                 timeoutId = null;
                 
                 var number = 1 + Math.floor(Math.random() * 3);
-                $("#imageKujuk").css("display", "block");
+                $("#imageKujuk").css("display", "inline");
+                $("#imageKujuk").css("height", "100%");
 
     			if (number == 1){
     			  $( "#imageKujuk" ).attr("src","water.png");
@@ -110,6 +106,7 @@
         else {
            $( "#imageKujuk" ).removeAttr("src");
            $("#imageKujuk").css("display", "none");
+           $("#imageKujuk").css("height", "0%");
         }
     });
 

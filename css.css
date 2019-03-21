@@ -13,6 +13,8 @@ body{
 	width: 100%;
 	height: 15vh;
 }
+
+
 #header h1 {
 	font-size: 60px;
 	text-transform: uppercase;
@@ -249,19 +251,20 @@ body{
 
 .shut{
   width: 600px;
-  height: 320px;
-  background: #222222;
+  height: 260px;
+  background: transparent;
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
-  transform: translate(-50%, -75%) rotate(-45deg);
+  transform: translate(-50%, -75%);
   z-index: 99999;
+  overflow: hidden;
 }
 
 .shut .lip1{
   display: block;
   width: 100%;
-  height: 50%;
+  height: 45%;
   background: rgb(253, 0, 0);
   border-radius: 0 0 60% 60%;
   transition: 0.4s all;
@@ -276,7 +279,7 @@ body{
   -webkit-box-sizing: border-box;
   display: block;
   width: 100%;
-  height: 2vh;
+  height: 10%;
   background: repeating-linear-gradient( 
   90deg,
   #fff,
@@ -309,7 +312,7 @@ body{
 .shut .lip2{
   display: block;
   width: 100%;
-  height: 50%;
+  height: 45%;
   background: rgb(253, 0, 0);
   border-radius: 60% 60% 0 0;
   transition: 0.4s all;
@@ -317,23 +320,20 @@ body{
 }
 
 
-.mouth:hover > .shut .lip1{
+.shut:hover > .lip1{
   height: 20%;
 }
 
-.mouth:hover > .shut .lip2{
+.shut:hover > .lip2{
   height: 20%;
 }
 
 
-.mouth:hover > .shut .pusher{
+.shut:hover > .pusher{
   height: 60%;
   background:#222222;
 }
 
-.mouth:hover > .shut img{
-  height: 100%;
-}
 
 /*Hat */
 .container{
