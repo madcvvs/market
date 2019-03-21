@@ -85,20 +85,23 @@
 
     <script type="text/javascript">
 
-
-$('.sok-txt').keyup(function(e){
-    if(e.keyCode == 13)
-    {
-        var sokOrd = $(".sok-txt").val();
-        console.log(sokOrd);
-
-        var width = 11 + "px"
-        console.log(width);
-
-        $(".typewriter").html("<div class='typewriter'> <h1>" + sokOrd + "</h1> </div>");
-        $('h1.typewriter').css("max-width", "11px");
+    function encodeHTML(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
     }
-});
+
+    $('.sok-txt').keyup(function(e){
+        if(e.keyCode == 13)
+        {
+            var sokOrd = $(".sok-txt").val();
+            console.log(sokOrd);
+
+            var width = 11 + "px"
+            console.log(width);
+
+            $(".typewriter").html("<div class='typewriter'> <h1>" + encodeHTML(sokOrd) + "</h1> </div>");
+            $('h1.typewriter').css("max-width", "11px");
+        }
+    });
 
 
 
