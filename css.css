@@ -241,18 +241,18 @@ body{
 
 .nose{
   position: absolute;
-  top: 52%;
+  top: 50%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
 }
 .noses{
-  width: 100px;
-  height: 60px;
+  width: 60px;
+  height: 40px;
   background: rgb(0, 0, 0);
   display: inline-block;
-  margin: 40px;
-  border-radius: 50%;
+  margin: 30px;
+  border-radius: 100%;
   position: relative;
   overflow: hidden;
 }
