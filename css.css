@@ -154,7 +154,7 @@ body{
 
 .eyes{
   position: absolute;
-  top: 40%;
+  top: 35%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
@@ -238,6 +238,30 @@ body{
  font-weight: bold;
 }
 
+.nose{
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.noses{
+  width: 100px;
+  height: 60px;
+  background: rgb(0, 0, 0);
+  display: inline-block;
+  margin: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.nose1{
+  transform: rotate(-35deg);
+}
+.nose2{
+  transform: rotate(35deg);
+}
 
 
 .shut{
@@ -245,7 +269,7 @@ body{
   height: 260px;
   background: transparent;
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -75%);
   z-index: 99999;
@@ -329,7 +353,7 @@ body{
 /*Hat */
 .container{
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%,-50%) rotateX(70deg);
 }
