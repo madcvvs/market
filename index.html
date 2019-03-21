@@ -54,7 +54,7 @@
       </div>
 
           <div class="shut">
-            <span class="lip1"></span>
+            <span class="lip1"><h1 id="namn"></h1></span>
             <span class="pusher"><img id="imageKujuk"></span>
             <span class="lip2"></span>
           </div>
@@ -115,10 +115,13 @@ $('.sok-txt').keyup(function(e){
 
     			if (number == 1){
     			  $( "#imageKujuk" ).attr("src","water.png");
+            $( "#namn" ).html("Vatten");
     			}else if(number == 2){
     			  $( "#imageKujuk" ).attr("src","meny.png");
+            $( "#namn" ).html("Bok");
     			}else if(number == 3){
     			  $( "#imageKujuk" ).attr("src","kujuk.jpg");
+            $( "#namn" ).html("Ett kujuk");
     			}
 
 
@@ -134,6 +137,7 @@ $('.sok-txt').keyup(function(e){
            $( "#imageKujuk" ).removeAttr("src");
            $("#imageKujuk").css("display", "none");
            $("#imageKujuk").css("height", "0%");
+           $( "#namn" ).html("");
         }
     });
 
