@@ -30,7 +30,12 @@
 		<span class="ripple r4"></span>
 		<span class="ripple r5"></span>
 		<span class="ripple r6"></span>
-	</div>
+  </div>
+  
+  <div class="typewriter">
+    <h1>Hello my nigga</h1>
+  </div>
+
       <div class="eyes">
           <div class="eye">
             <div class="ball"></div>
@@ -81,6 +86,22 @@
     <script type="text/javascript">
 
 
+$('.sok-txt').keyup(function(e){
+    if(e.keyCode == 13)
+    {
+        var sokOrd = $(".sok-txt").val();
+        console.log(sokOrd);
+
+        var width = 11 + "px"
+        console.log(width);
+
+        $(".typewriter").html("<div class='typewriter'> <h1>" + sokOrd + "</h1> </div>");
+        $('h1.typewriter').css("max-width", "11px");
+    }
+});
+
+
+
 
     var timeoutId;
     $(".shut").hover(function() {
@@ -115,29 +136,6 @@
            $("#imageKujuk").css("height", "0%");
         }
     });
-
-
-
-
-
-      /*
-  $( ".shut" ).hover(
-  function() {
-    
-    var number = 1 + Math.floor(Math.random() * 3);
-
-    if (number == 1){
-      $( "#imageKujuk" ).attr("src","water.png");
-    }else if(number == 2){
-      $( "#imageKujuk" ).attr("src","meny.png");
-    }else if(number == 3){
-      $( "#imageKujuk" ).attr("src","kujuk.jpg");
-    }
-  }
-);
-
-*/
-
 
 
 
