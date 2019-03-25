@@ -342,14 +342,13 @@ transition: 0.4s all;
 
 }
 
-
-.shut .pusher{
+.shut .teeth1{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   display: block;
   width: 100%;
-  height: 10%;
+  height: 5%;
   background: repeating-linear-gradient( 
   90deg,
   #fff,
@@ -362,6 +361,41 @@ transition: 0.4s all;
   border: solid #f00;
   border-width: 0px 5px 0px 5px;
 
+}
+
+.shut .pusher{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 0%;
+  background: transparent;
+  transition: 0.4s all;
+  border: solid #f00;
+  border-width: 0px 5px 0px 5px;
+
+}
+
+
+.shut .teeth2{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 5%;
+  background: repeating-linear-gradient( 
+  90deg,
+  #fff,
+  #fff 30px,
+  #000 20px,
+  #000 40px
+  );
+
+  transition: 0.4s all;
+  border: solid #f00;
+  border-width: 0px 5px 0px 5px;
 
 }
 
