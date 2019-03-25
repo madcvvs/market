@@ -7,31 +7,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-
-    <div id="overlay">
-        <div class="container3">
-            <div class="sun"></div>
-            <div class="earth"></div>
-          </div>
-
-
-    </div>
-
-
-<script>
-var overlay = document.getElementById("overlay");
-
-window.addEventListener('load', function(){
-  
-  
-  setInterval(function(){ $( "#overlay" ).fadeOut(500); }, 1500);
-  setInterval(function(){ overlay.style.display = 'none'; }, 3000);
-  
-})
-</script>
-
 	<div id="header">
-		<a href="index.html"><h1><i class="far fa-money-bill-alt"></i> Market.com</h1></a>
+		<h1><i class="far fa-money-bill-alt"></i> Market.com</h1>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
 			<body>
   <div class="sok">
@@ -54,7 +31,7 @@ window.addEventListener('load', function(){
 		<span class="ripple r5"></span>
 		<span class="ripple r6"></span>
   </div>
-  
+
   <div class="typewriter">
     <H1>MARKET.COM</H1>
   </div>
@@ -68,7 +45,7 @@ window.addEventListener('load', function(){
             <div class="ball"></div>
           </div>
         </div>
-      
+
       <div class="nose">
         <div class="noses nose1">
         </div>
@@ -82,13 +59,18 @@ window.addEventListener('load', function(){
             <span class="lip2"></span>
           </div>
 
+
+
+
+
+
 		<div class="login-box">
       <div class="hide-login-btn"><i id="cross" class="fas fa-times-circle"></i></div>
-    <form class="login-form" method="post" action="login.php" autocomplete="off">
+    <form class="login-form" method="post" action="index.php" autocomplete="off">
 
       <h1>Welcome</h1>
-      <input class="txtb" type="text" name="username" placeholder="Username">
-      <input class="txtb" type="password" name="password" placeholder="Password">
+      <input class="txtb" type="text" name="" placeholder="Username">
+      <input class="txtb" type="password" name="" placeholder="Password">
       <input class="login-btn" type="submit" name="" value="Login">
 			<input class="sign-up-btn" type="submit" name="" value="Sign up">
     </form>
@@ -97,29 +79,27 @@ window.addEventListener('load', function(){
 
 	<div id="footer">
     <h1 id="bitcoin"></h1>
+
 	</div>
 
 
 
     <script type="text/javascript">
 
-    function encodeHTML(s) {
-        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+$('.sok-txt').keyup(function(e){
+    if(e.keyCode == 13)
+    {
+        var sokOrd = $(".sok-txt").val();
+        console.log(sokOrd);
+
+        var width = 11 + "px"
+        console.log(width);
+
+        $(".typewriter").html("<div class='typewriter'> <h1>" + sokOrd + "</h1> </div>");
+        $('h1.typewriter').css("max-width", "11px");
     }
-
-    $('.sok-txt').keyup(function(e){
-        if(e.keyCode == 13)
-        {
-            var sokOrd = $(".sok-txt").val();
-            console.log(sokOrd);
-
-            var width = 11 + "px"
-            console.log(width);
-
-            $(".typewriter").html("<div class='typewriter'> <h1>" + encodeHTML(sokOrd) + "</h1> </div>");
-            $('h1.typewriter').css("max-width", "11px");
-        }
-    });
+});
 
 
 
@@ -129,20 +109,24 @@ window.addEventListener('load', function(){
         if (!timeoutId) {
             timeoutId = window.setTimeout(function() {
                 timeoutId = null;
-                
-                var number = 1 + Math.floor(Math.random() * 3);
+
+                var number = 1 + Math.floor(Math.random() * 4);
                 $("#imageKujuk").css("display", "inline");
                 $("#imageKujuk").css("height", "100%");
 
     			if (number == 1){
-    			  $( "#imageKujuk" ).attr("src","water.png");
-            $( "#namn" ).html("Vatten");
+    			  $( "#imageKujuk" ).attr("src","methias.jpg");
+            $( "#namn" ).html("Methias");
     			}else if(number == 2){
-    			  $( "#imageKujuk" ).attr("src","meny.png");
-            $( "#namn" ).html("Bok");
+    			  $( "#imageKujuk" ).attr("src","matte.jpg");
+            $( "#namn" ).html("Matte");
     			}else if(number == 3){
     			  $( "#imageKujuk" ).attr("src","kujuk.jpg");
             $( "#namn" ).html("Ett kujuk");
+    			}
+					else if(number == 4){
+    			  $( "#imageKujuk" ).attr("src","matttias.jpg");
+            $( "#namn" ).html("NyDuschad Kujuk");
     			}
 
 
