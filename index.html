@@ -2,15 +2,17 @@
 <html>
 <head>
 	<title>Market.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 	<div id="header">
-		<a href="index.html"><h1><i class="far fa-money-bill-alt"></i> Market.com</h1></a>
-		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
-			<body>
+				<p id="timetosale"></p>
+				<a href="index.html"><h1><i class="far fa-money-bill-alt"></i> Market.com</h1></a>
+		  	<div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
+				<body>
   <div class="sok">
 
    <input type="text" name="" class="sok-txt" placeholder="Search..."/>
@@ -31,7 +33,7 @@
 		<span class="ripple r5"></span>
 		<span class="ripple r6"></span>
   </div>
-  
+
   <div class="typewriter">
     <H1>MARKET.COM</H1>
   </div>
@@ -45,7 +47,7 @@
             <div class="ball"></div>
           </div>
         </div>
-      
+
       <div class="nose">
         <div class="noses nose1">
         </div>
@@ -60,8 +62,8 @@
           </div>
 
 
-    
-    
+
+
 
 
 		<div class="login-box">
@@ -111,7 +113,7 @@
         if (!timeoutId) {
             timeoutId = window.setTimeout(function() {
                 timeoutId = null;
-                
+
                 var number = 1 + Math.floor(Math.random() * 3);
                 $("#imageKujuk").css("display", "inline");
                 $("#imageKujuk").css("height", "100%");
@@ -224,8 +226,37 @@
     }
   }
     //end of eyeballs
+</script>
+		<script>
+		// Välj datum och tid då nästa rea ska börja
+		var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 
+		// Uppdaterar nedräkningen varje sekund
+		var x = setInterval(function() {
 
-    </script>
+		  // Denna hämtar dagens datum och tid
+		  var now = new Date().getTime();
+
+		  // Denna hittar/räknar ut hur lång tid de är mellan nu och när rean ska börja
+		  var distance = countDownDate - now;
+
+		  // gör räknandet för dagar, timmar, minuter och sekunder
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		  // skriver ut hur lång tid de är
+		  document.getElementById("timetosale").innerHTML = days + "d " + hours + "h "
+		  + minutes + "m " + seconds + "s ";
+
+		  // If the count down is over, write some text
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("timetosale").innerHTML = "THE SALE HAS NOW EXPIRED";
+		  }
+		}, 1000);
+		</script>
+
 </body>
 </html>
