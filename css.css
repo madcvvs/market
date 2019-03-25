@@ -434,7 +434,7 @@ transition: 0.4s all;
 
 
 .shut:hover > .pusher{
-  height: 60%;
+  height: 50%;
   background:#222222;
 }
 
