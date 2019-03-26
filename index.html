@@ -7,32 +7,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-
-    <div id="overlay">
-        <div class="container3">
-            <div class="sun"></div>
-            <div class="earth"></div>
-          </div>
-
-
-    </div>
-
-
-<script>
-var overlay = document.getElementById("overlay");
-
-window.addEventListener('load', function(){
-  
-  
-  setInterval(function(){ $( "#overlay" ).fadeOut(500); }, 1500);
-  setInterval(function(){ overlay.style.display = 'none'; }, 3000);
-  
-})
-</script>
-
-
-
-
 	<div id="header">
 		<h1><i class="far fa-money-bill-alt"></i> Market.com</h1>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
@@ -81,9 +55,7 @@ window.addEventListener('load', function(){
 
           <div class="shut">
             <span class="lip1"><h1 id="namn"></h1></span>
-            <span class="teeth1"></span>
             <span class="pusher"><img id="imageKujuk"></span>
-            <span class="teeth2"></span>
             <span class="lip2"></span>
           </div>
 
@@ -94,11 +66,11 @@ window.addEventListener('load', function(){
 
 		<div class="login-box">
       <div class="hide-login-btn"><i id="cross" class="fas fa-times-circle"></i></div>
-    <form class="login-form" method="post" action="login.php" autocomplete="off">
+    <form class="login-form" method="post" action="index.php" autocomplete="off">
 
       <h1>Welcome</h1>
-      <input class="txtb" type="text" name="username" placeholder="Username">
-      <input class="txtb" type="password" name="password" placeholder="Password">
+      <input class="txtb" type="text" name="" placeholder="Username">
+      <input class="txtb" type="password" name="" placeholder="Password">
       <input class="login-btn" type="submit" name="" value="Login">
 			<input class="sign-up-btn" type="submit" name="" value="Sign up">
     </form>
@@ -134,6 +106,7 @@ $('.sok-txt').keyup(function(e){
 
     var timeoutId;
     $(".shut").hover(function() {
+			
         if (!timeoutId) {
             timeoutId = window.setTimeout(function() {
                 timeoutId = null;
@@ -143,18 +116,18 @@ $('.sok-txt').keyup(function(e){
                 $("#imageKujuk").css("height", "100%");
 
     			if (number == 1){
-    				$( "#imageKujuk" ).attr("src","methias.jpg");
-            		$( "#namn" ).html("Methias");
+    			  $( "#imageKujuk" ).attr("src","methias.jpg");
+            $( "#namn" ).html("Methias");
     			}else if(number == 2){
-    			  	$( "#imageKujuk" ).attr("src","matte.jpg");
-            		$( "#namn" ).html("Matte");
+    			  $( "#imageKujuk" ).attr("src","matte.jpg");
+            $( "#namn" ).html("Matte");
     			}else if(number == 3){
-    			  	$( "#imageKujuk" ).attr("src","kujuk.jpg");
-            		$( "#namn" ).html("Ett kujuk");
+    			  $( "#imageKujuk" ).attr("src","kujuk.jpg");
+            $( "#namn" ).html("Ett kujuk");
     			}
-				else if(number == 4){
-    				$( "#imageKujuk" ).attr("src","matttias.jpg");
-            		$( "#namn" ).html("NyDuschad Kujuk");
+					else if(number == 4){
+    			  $( "#imageKujuk" ).attr("src","matttias.jpg");
+            $( "#namn" ).html("NyDuschad Kujuk");
     			}
 
 
