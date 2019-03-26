@@ -77,10 +77,10 @@ transition: 0.4s all;
 	color: #2c3e5036;
 	background-image: url(water.png);
 	-webkit-background-clip:text;
-  animation: water 15s infinite;  
+  animation: water 15s infinite;
   animation-timing-function: linear;
   -webkit-text-stroke-color: red;
-  -webkit-text-stroke-width: 2.00px; 
+  -webkit-text-stroke-width: 2.00px;
 }
 
 @keyframes water {
@@ -97,7 +97,7 @@ transition: 0.4s all;
   70% {background-position: left 840px top -20px;}
   80% {background-position: left 960px top -20px;}
   90% {background-position: left 1080px top -20px;}
-	
+
 
   to{
 		background-position: left 1200px top -20px;
@@ -349,7 +349,7 @@ transition: 0.4s all;
   display: block;
   width: 100%;
   height: 5%;
-  background: repeating-linear-gradient( 
+  background: repeating-linear-gradient(
   90deg,
   #fff,
   #fff 30px,
@@ -385,7 +385,7 @@ transition: 0.4s all;
   display: block;
   width: 100%;
   height: 5%;
-  background: repeating-linear-gradient( 
+  background: repeating-linear-gradient(
   90deg,
   #fff,
   #fff 30px,
@@ -512,7 +512,7 @@ transition: 0.4s all;
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  animation: 
+  animation:
     typing 10.5s steps(150, end),
     blink-caret .5s step-end infinite;
 }
