@@ -1,11 +1,65 @@
 *{
 	font-family: "montserrat",sans-serif;
 }
+a {
+  text-decoration: none;
+}
 body{
   margin: 0;
   padding: 0;
   background: #222;
+  overflow-x: hidden;
+}
 
+
+.container3{
+  width: 120px;
+  height: 120px;
+  margin: 200px auto;
+  position: relative;
+  padding: 40px;
+}
+.sun{
+  width: 120px;
+  height: 120px;
+  background: url(sun.png) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+.earth{
+  width: 40px;
+  height: 40px;
+  background: url(earth.png) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 20px 20px 10px 2px #000000cc;
+  animation: ro 1s infinite;
+}
+@keyframes ro {
+  50%{
+    left: calc(100% - 40px);
+    top: calc(100% - 40px);
+  }
+  100%{
+    z-index: -1;
+  }
+}
+
+
+
+
+#overlay{
+height:100%;
+width:100%;
+background:#6a89cc;
+position:fixed;
+left:0;
+top:0;
+z-index: 99999999999999999999999;
+transition: 0.4s all;
 }
 
 #header{
@@ -23,10 +77,10 @@ body{
 	color: #2c3e5036;
 	background-image: url(water.png);
 	-webkit-background-clip:text;
-  animation: water 15s infinite;
+  animation: water 15s infinite;  
   animation-timing-function: linear;
   -webkit-text-stroke-color: red;
-  -webkit-text-stroke-width: 2.00px;
+  -webkit-text-stroke-width: 2.00px; 
 }
 
 @keyframes water {
@@ -43,7 +97,7 @@ body{
   70% {background-position: left 840px top -20px;}
   80% {background-position: left 960px top -20px;}
   90% {background-position: left 1080px top -20px;}
-
+	
 
   to{
 		background-position: left 1200px top -20px;
@@ -93,7 +147,7 @@ body{
   transform: translate(-50%,-50%);
   color: white;
   text-align: center;
-	max-width: 20vh;
+	max-width: 25.7vh;
 }
 .login-form h1{
   font-weight: 400;
@@ -267,7 +321,7 @@ body{
 
 .shut{
   width: 600px;
-  height: 260px;
+  height: 280px;
   background: transparent;
   position: absolute;
   top: 80%;
@@ -288,15 +342,14 @@ body{
 
 }
 
-
-.shut .pusher{
+.shut .teeth1{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   display: block;
   width: 100%;
-  height: 10%;
-  background: repeating-linear-gradient(
+  height: 5%;
+  background: repeating-linear-gradient( 
   90deg,
   #fff,
   #fff 30px,
@@ -308,6 +361,41 @@ body{
   border: solid #f00;
   border-width: 0px 5px 0px 5px;
 
+}
+
+.shut .pusher{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 0%;
+  background: transparent;
+  transition: 0.4s all;
+  border: solid #f00;
+  border-width: 0px 5px 0px 5px;
+
+}
+
+
+.shut .teeth2{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 5%;
+  background: repeating-linear-gradient( 
+  90deg,
+  #fff,
+  #fff 30px,
+  #000 20px,
+  #000 40px
+  );
+
+  transition: 0.4s all;
+  border: solid #f00;
+  border-width: 0px 5px 0px 5px;
 
 }
 
@@ -346,7 +434,7 @@ body{
 
 
 .shut:hover > .pusher{
-  height: 60%;
+  height: 50%;
   background:#222222;
 }
 
@@ -418,14 +506,13 @@ body{
   max-width: max-content;
   left:0;
   color: #fff;
-	
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  animation:
+  animation: 
     typing 10.5s steps(150, end),
     blink-caret .5s step-end infinite;
 }
