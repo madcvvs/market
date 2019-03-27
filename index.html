@@ -11,13 +11,11 @@
 		<h1><i class="far fa-money-bill-alt"></i> Market.com</h1>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
 			<body>
+
   <div class="sok">
-
    <input type="text" name="" class="sok-txt" placeholder="Search..."/>
-
    <a class="sok-btn">
-     <i class="fas fa-search"></i>
-
+   <i class="fas fa-search"></i>
    </a>
   </div>
 	</div>
@@ -55,9 +53,7 @@
 
           <div class="shut">
             <span class="lip1"><h1 id="namn"></h1></span>
-            <span class="teeth1"></span>
             <span class="pusher"><img id="imageKujuk"></span>
-            <span class="teeth2"></span>
             <span class="lip2"></span>
           </div>
 
@@ -68,11 +64,11 @@
 
 		<div class="login-box">
       <div class="hide-login-btn"><i id="cross" class="fas fa-times-circle"></i></div>
-    <form class="login-form" method="post" action="login.php" autocomplete="off">
+    <form class="login-form" method="post" action="index.php" autocomplete="off">
 
       <h1>Welcome</h1>
-      <input class="txtb" type="text" name="username" placeholder="Username">
-      <input class="txtb" type="password" name="password" placeholder="Password">
+      <input class="txtb" type="text" name="" placeholder="Username">
+      <input class="txtb" type="password" name="" placeholder="Password">
       <input class="login-btn" type="submit" name="" value="Login">
 			<input class="sign-up-btn" type="submit" name="" value="Sign up">
     </form>
@@ -81,14 +77,9 @@
 
 	<div id="footer">
     <h1 id="bitcoin"></h1>
-
 	</div>
 
-
-
     <script type="text/javascript">
-
-
 $('.sok-txt').keyup(function(e){
     if(e.keyCode == 13)
     {
@@ -103,12 +94,9 @@ $('.sok-txt').keyup(function(e){
     }
 });
 
-
-
-
     var timeoutId;
     $(".shut").hover(function() {
-			
+
         if (!timeoutId) {
             timeoutId = window.setTimeout(function() {
                 timeoutId = null;
@@ -132,7 +120,6 @@ $('.sok-txt').keyup(function(e){
             $( "#namn" ).html("NyDuschad Kujuk");
     			}
 
-
            }, 100);
         }
     },
@@ -148,9 +135,6 @@ $('.sok-txt').keyup(function(e){
            $( "#namn" ).html("");
         }
     });
-
-
-
 
     $(".show-login-btn").on("click",function(){
       $(".login-box").toggleClass("showed");
@@ -168,8 +152,6 @@ $('.sok-txt').keyup(function(e){
     function my_function(){
     $.getJSON("https://api.coindesk.com/v1/bpi/currentprice/SEK.json", function( data ) {
 
-
-
       //BEFORE
       var btcBeforeCheckvalue = $( "#valuebtc" ).text();
 
@@ -181,7 +163,6 @@ $('.sok-txt').keyup(function(e){
       console.log("Before " + btcValueBefore);
 
       //END OF BEFORE
-
 
       var btcValue = data.bpi.SEK.rate;
 
@@ -206,11 +187,8 @@ $('.sok-txt').keyup(function(e){
       	setInterval(function(){ $( "#bitcoin" ).css("color", "black"); }, 3000);
       }
 
-
-
       $( "#bitcoin" ).html( "<i class=\"fab fa-btc\"></i> = <span id='valuebtc'>" + btcValue + "</span> SEK");
     });}
-
 
     //eyeballs
     var balls = document.getElementsByClassName("ball");
@@ -229,7 +207,6 @@ $('.sok-txt').keyup(function(e){
     }
   }
     //end of eyeballs
-
 
     </script>
 </body>
