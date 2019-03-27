@@ -1,65 +1,10 @@
 *{
 	font-family: "montserrat",sans-serif;
 }
-a {
-  text-decoration: none;
-}
 body{
   margin: 0;
   padding: 0;
   background: #222;
-  overflow-x: hidden;
-}
-
-
-.container3{
-  width: 120px;
-  height: 120px;
-  margin: 200px auto;
-  position: relative;
-  padding: 40px;
-}
-.sun{
-  width: 120px;
-  height: 120px;
-  background: url(sun.png) no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-}
-.earth{
-  width: 40px;
-  height: 40px;
-  background: url(earth.png) no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 20px 20px 10px 2px #000000cc;
-  animation: ro 1s infinite;
-}
-@keyframes ro {
-  50%{
-    left: calc(100% - 40px);
-    top: calc(100% - 40px);
-  }
-  100%{
-    z-index: -1;
-  }
-}
-
-
-
-
-#overlay{
-height:100%;
-width:100%;
-background:#6a89cc;
-position:fixed;
-left:0;
-top:0;
-z-index: 99999999999999999999999;
-transition: 0.4s all;
 }
 
 #header{
@@ -68,7 +13,6 @@ transition: 0.4s all;
 	width: 100%;
 	height: 15vh;
 }
-
 
 #header h1 {
 	font-size: 60px;
@@ -103,8 +47,6 @@ transition: 0.4s all;
 		background-position: left 1200px top -20px;
 	}
 }
-
-
 
 #cross {
   font-size: 30px;
@@ -147,7 +89,7 @@ transition: 0.4s all;
   transform: translate(-50%,-50%);
   color: white;
   text-align: center;
-	max-width: 25.7vh;
+	max-width: 20vh;
 }
 .login-form h1{
   font-weight: 400;
@@ -236,7 +178,6 @@ transition: 0.4s all;
   border-radius: 50%;
   border: 15px solid #6d2d00;
 }
-
 
 /* Sökknapp */
 .sok{
@@ -339,28 +280,6 @@ transition: 0.4s all;
   border-radius: 0 0 60% 60%;
   transition: 0.4s all;
   transform: rotate(180deg);
-
-}
-
-.shut .teeth1{
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  display: block;
-  width: 100%;
-  height: 5%;
-  background: repeating-linear-gradient(
-  90deg,
-  #fff,
-  #fff 30px,
-  #000 20px,
-  #000 40px
-  );
-
-  transition: 0.4s all;
-  border: solid #f00;
-  border-width: 0px 5px 0px 5px;
-
 }
 
 .shut .pusher{
@@ -369,22 +288,7 @@ transition: 0.4s all;
   -webkit-box-sizing: border-box;
   display: block;
   width: 100%;
-  height: 0%;
-  background: transparent;
-  transition: 0.4s all;
-  border: solid #f00;
-  border-width: 0px 5px 0px 5px;
-
-}
-
-
-.shut .teeth2{
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  display: block;
-  width: 100%;
-  height: 5%;
+  height: 10%;
   background: repeating-linear-gradient(
   90deg,
   #fff,
@@ -397,8 +301,8 @@ transition: 0.4s all;
   border: solid #f00;
   border-width: 0px 5px 0px 5px;
 
-}
 
+}
 
 .shut img{
   display: block;
@@ -411,8 +315,6 @@ transition: 0.4s all;
   display: none;
 }
 
-
-
 .shut .lip2{
   display: block;
   width: 100%;
@@ -423,7 +325,6 @@ transition: 0.4s all;
   transform: rotate(180deg);
 }
 
-
 .shut:hover > .lip1{
   height: 20%;
 }
@@ -432,12 +333,10 @@ transition: 0.4s all;
   height: 20%;
 }
 
-
 .shut:hover > .pusher{
   height: 60%;
   background:#222222;
 }
-
 
 /*Hat */
 .container{
@@ -450,7 +349,6 @@ transition: 0.4s all;
   position: fixed;
   top: 0;
   transform: translateX(-50%);
-
   width: 60px;
   height: 20px;
   border-radius: 50%;
@@ -472,8 +370,6 @@ transition: 0.4s all;
   animation-delay: 4s;
 }
 
-
-
 @keyframes ripple {
   from{
     border: 4px solid #8e44ad;
@@ -488,7 +384,6 @@ transition: 0.4s all;
     opacity: 0;
   }
 }
-
 
 #namn{
   transform: rotate(180deg);
@@ -527,13 +422,4 @@ transition: 0.4s all;
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
-}
-p {
-		left: 58%;
-		margin: 3vh 0 0 0;
-		position: absolute;
-		text-align: center;
-		font-size: 200%;
-		padding: 0;
-		color: 000000;
 }
