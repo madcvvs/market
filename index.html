@@ -33,16 +33,13 @@ window.addEventListener('load', function(){
 	<div id="header">
 		<h1><i class="far fa-money-bill-alt"></i> Market.com</h1>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
-			<body>
-  <div class="sok">
-
-   <input type="text" name="" class="sok-txt" placeholder="Search..."/>
-
-   <a class="sok-btn">
-     <i class="fas fa-search"></i>
-
-   </a>
-  </div>
+		  <div class="show-signup-btn"><i class="fas fa-sign-in-alt"></i> Signup</div>
+  			<div class="sok">
+   				<input type="text" name="" class="sok-txt" placeholder="Search..."/>
+   					<a class="sok-btn">
+     					<i class="fas fa-search"></i>
+   					</a>
+  			</div>
 	</div>
 
 	<div id="content">
@@ -96,22 +93,25 @@ window.addEventListener('load', function(){
     			<input class="txtb" type="text" name="username" placeholder="Username">
     			<input class="txtb" type="password" name="password" placeholder="Password">
     			<input class="login-btn" type="submit" name="login" value="login">
-    			<input class="sign-up-btn" type="submit" name="login" value="signup">
     		</form>
     	</div>
 	</div>
 
-		<div class="login-box">
-    	<div class="hide-login-btn"><i id="cross" class="fas fa-times-circle"></i></div>
-    		<form class="login-form" method="post" action="login.php" autocomplete="off">
+	<div class="signup-box">
+    	<div class="hide-signup-btn"><i id="cross" class="fas fa-times-circle"></i></div>
+    		<form class="signup-form" method="post" action="signup.php" autocomplete="off">
    		 		<h1>Welcome</h1>
     			<input class="txtb" type="text" name="username" placeholder="Username">
     			<input class="txtb" type="password" name="password" placeholder="Password">
-    			<input class="login-btn" type="submit" name="login" value="login">
-    			<input class="sign-up-btn" type="submit" name="login" value="signup">
+    			<input class="sign-up-btn" type="submit" name="signup" value="signup">
+    			<script>
+    			</script>
     		</form>
     	</div>
 	</div>
+
+
+
 
 	<div id="footer">
     <h1 id="bitcoin"></h1>
@@ -192,6 +192,17 @@ $('.sok-txt').keyup(function(e){
     $(".hide-login-btn").on("click",function(){
       $(".login-box").toggleClass("showed");
     });
+
+
+    $(".show-signup-btn").on("click",function(){
+      $(".signup-box").toggleClass("showed");
+    });
+    $(".hide-signup-btn").on("click",function(){
+      $(".signup-box").toggleClass("showed");
+    });
+
+
+
 
     setInterval("my_function();",5000);
 

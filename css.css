@@ -147,6 +147,31 @@ transition: 0.4s all;
   font-weight: 400;
   margin-top: 0;
 }
+.signup-box{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg,#692323,#ffffff28);
+  transition: 1s;
+  z-index: 999999999999;
+}
+.signup-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  text-align: center;
+	max-width: 20vh;
+}
+.signup-form h1{
+  font-weight: 400;
+  margin-top: 0;
+}
+
+
 .txtb{
   display: block;
   box-sizing: border-box;
@@ -180,6 +205,35 @@ transition: 0.4s all;
 }
 .show-login-btn{
   position: absolute;
+  left:84%;
+  top:5vh;
+  color: white;
+  border: 2px solid;
+  padding: 10px;
+  cursor: pointer;
+}
+.signup-btn{
+  width: 240px;
+  background: #2c3e50;
+  border: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hide-signup-btn{
+  color: #000;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: .7;
+}
+
+
+.show-signup-btn{
+  position: absolute;
   left:89%;
   top:5vh;
   color: white;
@@ -209,8 +263,8 @@ transition: 0.4s all;
   text-align: center;
 }
 .eye{
-  width: 240px;
-  height: 120px;
+  width: 15%;
+  height: 20vh;
   background: #fff;
   display: inline-block;
   margin: 40px;
@@ -294,8 +348,8 @@ transition: 0.4s all;
   text-align: center;
 }
 .noses{
-  width: 60px;
-  height: 40px;
+  width: 3%;
+  height: 5vh;
   background: rgb(0, 0, 0);
   display: inline-block;
   margin: 30px;
@@ -313,8 +367,8 @@ transition: 0.4s all;
 
 
 .shut{
-  width: 600px;
-  height: 300px;
+  width: 40%;
+  height: 30vh;
   background: transparent;
   position: absolute;
   top: 80%;
@@ -429,15 +483,16 @@ transition: 0.4s all;
 .container{
   position: absolute;
   top: 15%;
-  left: 50%;
+  left: 65%;
+  width:30%;
   transform: translate(-50%,-50%) rotateX(70deg);
 }
 .ripple{
   position: fixed;
   top: 0;
   transform: translateX(-50%);
-  width: 60px;
-  height: 20px;
+  width: 45%;
+  height: 15vh;
   border-radius: 50%;
   animation: ripple 2s linear infinite;
 }
@@ -461,12 +516,14 @@ transition: 0.4s all;
   from{
     border: 4px solid #8e44ad;
     background: #9b59b670;
+    width:5%;
+    height:5vh;
   }
   to{
     border: 0px solid #8e44ad;
     background: #9b59b670;
-    width: 400px;
-    height: 400px;
+    width: 140%;
+    height: 40vh;
     top: 20px;
     opacity: 0;
   }
