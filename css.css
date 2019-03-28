@@ -67,11 +67,14 @@ transition: 0.4s all;
 }
 
 #header h1 {
-	font-size: 60px;
+	position: absolute;
+	top:1vh;
+	font-size: 3vw;
 	text-transform: uppercase;
   font-weight: 900;
 	color: #2c3e5036;
 	background-image: url(water.png);
+	background-size: 50vh 205%;
 	-webkit-background-clip:text;
   animation: water 15s infinite;
   animation-timing-function: linear;
