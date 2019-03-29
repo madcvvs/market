@@ -4,7 +4,8 @@ $loginPage;
 if ( isset( $_SESSION['login_user'] ) ) {
   // Grab user data from the database using the user_id
   // Let them access the "logged in only" pages
-  $loginPage = $_SESSION['login_user'];
+  $name = $_SESSION['login_user'];
+  $loginPage = "Welcome $name";
 
 } else {
   $loginPage = "Not logged in";
@@ -38,8 +39,8 @@ var overlay = document.getElementById("overlay");
 window.addEventListener('load', function(){
   
   
-  setInterval(function(){ $( "#overlay" ).fadeOut(500); }, 1500);
-  setInterval(function(){ overlay.style.display = 'none'; }, 3000);
+  setInterval(function(){ $( "#overlay" ).fadeOut(300); }, 300);
+  setInterval(function(){ overlay.style.display = 'none'; }, 1000);
   
 })
 </script>
@@ -47,7 +48,7 @@ window.addEventListener('load', function(){
 
 
 	<div id="header">
-		<h1><i class="far fa-money-bill-alt"></i> Market.com <?php echo $loginPage; ?> </h1>
+		<h1><i class="far fa-money-bill-alt"></i> Market.com </h1>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
       <div class="show-signup-btn"><i class="fas fa-sign-in-alt"></i> Signup</div>
       <div class="show-logout-btn"><i class="fas fa-sign-in-alt"></i> Logout</div>
@@ -70,7 +71,7 @@ window.addEventListener('load', function(){
   </div>
 
   <div class="typewriter">
-    <H1>MARKET.COM</H1>
+    <H1><?php echo $loginPage; ?></H1>
   </div>
 
       <div class="eyes">
