@@ -284,6 +284,7 @@ transition: 0.4s all;
   min-width: 250px;
 }
 .eye{
+  max-width: 200px;
   width: 15%;
   height: 20vh;
   background: #fff;
@@ -295,15 +296,15 @@ transition: 0.4s all;
 }
 
 .ball{
-  width: 40px;
-  height: 40px;
+  width: 20%;
+  height: 4vh;
   background: #000;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 50%;
-  border: 15px solid #6d2d00;
+  border: 3vh solid #6d2d00;
 }
 
 /* Sökknapp */
@@ -390,6 +391,7 @@ transition: 0.4s all;
 .shut{
   width: 40%;
   height: 30vh;
+  max-width: 500px;
   background: transparent;
   position: absolute;
   top: 80%;
