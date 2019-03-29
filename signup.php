@@ -21,5 +21,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "User already exists!";
     }
 
-    echo "<script> setTimeout(function(){document.location = 'index.html'}, 5000);  </script>";
+    echo "<script> setTimeout(function(){document.location = 'index.php'}, 5000);  </script>";
 }

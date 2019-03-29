@@ -1,6 +1,22 @@
+<?php
+session_start();
+$loginPage;
+if ( isset( $_SESSION['login_user'] ) ) {
+  // Grab user data from the database using the user_id
+  // Let them access the "logged in only" pages
+  $loginPage = $_SESSION['login_user'];
+
+} else {
+  $loginPage = "Not logged in";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Market.com</title>
 	<link rel="stylesheet" type="text/css" href="css.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -31,9 +47,10 @@ window.addEventListener('load', function(){
 
 
 	<div id="header">
-		<h1><i class="far fa-money-bill-alt"></i> Market.com</h1>
+		<h1><i class="far fa-money-bill-alt"></i> Market.com <?php echo $loginPage; ?> </h1>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
-		  <div class="show-signup-btn"><i class="fas fa-sign-in-alt"></i> Signup</div>
+      <div class="show-signup-btn"><i class="fas fa-sign-in-alt"></i> Signup</div>
+      <div class="show-logout-btn"><i class="fas fa-sign-in-alt"></i> Logout</div>
   			<div class="sok">
    				<input type="text" name="" class="sok-txt" placeholder="Search..."/>
    					<a class="sok-btn">
@@ -197,6 +214,11 @@ $('.sok-txt').keyup(function(e){
     $(".show-signup-btn").on("click",function(){
       $(".signup-box").toggleClass("showed");
     });
+
+    $(".show-logout-btn").on("click",function(){
+      window.location.replace("logout.php");
+    });
+
     $(".hide-signup-btn").on("click",function(){
       $(".signup-box").toggleClass("showed");
     });
