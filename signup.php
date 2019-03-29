@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -13,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if ($count == 0) {
         //session_register("myusername");
-        //$_SESSION['login_user'] = $myusername;
+        $_SESSION['login_user'] = $myusername;
         $sqlRegister = "INSERT INTO users (username, password) VALUES ('$myusername', '$mypassword')";
         $result = mysqli_query($db, $sqlRegister);
         echo "Successfully registered";

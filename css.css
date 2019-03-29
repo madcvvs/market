@@ -549,7 +549,8 @@ transition: 0.4s all;
   position: absolute;
   left: 0;
   right:0;
-  top: -20%;
+  top: -30%;
+  font-size: 2vw;
 }
 
 /* DEMO-SPECIFIC STYLES */

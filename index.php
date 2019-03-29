@@ -128,7 +128,7 @@ if ( isset( $_SESSION['login_user'] ) ) {
             <span class="teeth1"></span>
             <span class="pusher"><img id="imageKujuk"></span>
             <span class="teeth2"></span>
-            <span class="lip2"></span>
+            <a href="" class="lip2"></a>
           </div>
 
 
