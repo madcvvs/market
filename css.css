@@ -68,8 +68,8 @@ transition: 0.4s all;
 
 #header h1 {
 	position: absolute;
-	top:1vh;
-	font-size: 3vw;
+	top: -3vh;
+	font-size: calc(2em + 2vw);
 	text-transform: uppercase;
   font-weight: 900;
 	color: #2c3e5036;
@@ -550,7 +550,7 @@ transition: 0.4s all;
   left: 0;
   right:0;
   top: -30%;
-  font-size: 2vw;
+  font-size: calc(1em + 1vw);
 }
 
 /* DEMO-SPECIFIC STYLES */
