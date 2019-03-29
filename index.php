@@ -1,16 +1,3 @@
-<?php
-session_start();
-$loginPage;
-if ( isset( $_SESSION['login_user'] ) ) {
-  // Grab user data from the database using the user_id
-  // Let them access the "logged in only" pages
-  $name = $_SESSION['login_user'];
-  $loginPage = "Welcome $name";
-
-} else {
-  $loginPage = "Not logged in";
-}
-?>
 
 
 
@@ -43,9 +30,21 @@ window.addEventListener('load', function(){
   setInterval(function(){ overlay.style.display = 'none'; }, 1000);
   
 })
+
+
+function hidebuttons(){
+  $('.show-login-btn').css("display", "none");
+  $('.show-signup-btn').css("display", "none");
+  $('.show-logout-btn').css("display", "-webkit-box");
+}
+
+function showbuttons(){
+  $('.show-login-btn').css("display", "-webkit-box");
+  $('.show-signup-btn').css("display", "-webkit-box");
+  $('.show-logout-btn').css("display", "none");
+}
+
 </script>
-
-
 
 	<div id="header">
 		<h1><i class="far fa-money-bill-alt"></i> Market.com </h1>
@@ -60,6 +59,11 @@ window.addEventListener('load', function(){
   			</div>
 	</div>
 
+
+
+
+
+
 	<div id="content">
 		<div class="container">
 		<span class="ripple r1"></span>
@@ -69,6 +73,34 @@ window.addEventListener('load', function(){
 		<span class="ripple r5"></span>
 		<span class="ripple r6"></span>
   </div>
+
+  <?php
+session_start();
+$loginPage;
+if ( isset( $_SESSION['login_user'] ) ) {
+  // Grab user data from the database using the user_id
+  // Let them access the "logged in only" pages
+  $name = $_SESSION['login_user'];
+  $loginPage = "Welcome $name";
+
+  echo '<script>',
+  'hidebuttons();',
+  '</script>'
+  ;
+
+
+
+} else {
+  $loginPage = "Not logged in";
+  echo '<script>',
+  'showbuttons();',
+  '</script>'
+  ;
+}
+?>
+
+
+
 
   <div class="typewriter">
     <H1><?php echo $loginPage; ?></H1>
