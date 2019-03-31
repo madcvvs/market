@@ -18,8 +18,8 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         echo "Logged in";
         header('Location: index.php');
     } else {
-        echo "Incorrect username or password!";
-	header('Location: index.php');
+        $_SESSION['incorrect'] = "Incorrect username or password!";
+	    header('Location: index.php');
     }   
 }else{
     echo "NO INPUTS!";

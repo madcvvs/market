@@ -97,6 +97,21 @@ if ( isset( $_SESSION['login_user'] ) ) {
   '</script>'
   ;
 }
+
+if ( isset( $_SESSION['user_exists'] ) ) {
+  echo '<script>',
+  'alert("User already exists")',
+  '</script>';
+  session_destroy();
+}
+
+
+if ( isset( $_SESSION['incorrect'] ) ) {
+  echo '<script>',
+  'alert("incorrect username or password")',
+  '</script>';
+  session_destroy();
+}
 ?>
 
 

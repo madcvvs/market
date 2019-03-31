@@ -17,10 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['login_user'] = $myusername;
         $sqlRegister = "INSERT INTO users (username, password) VALUES ('$myusername', '$mypassword')";
         $result = mysqli_query($db, $sqlRegister);
-        echo "Successfully registered";
     } else {
-        echo "User already exists!";
+        $_SESSION['user_exists'] = "User already exists!";
     }
 
-    echo "<script> setTimeout(function(){document.location = 'index.php'}, 5000);  </script>";
+    header('Location: index.php');
 }
