@@ -69,7 +69,7 @@ transition: 0.4s all;
 #header h1 {
 	position: absolute;
 	top: -3vh;
-	font-size: calc(2em + 2vw);
+	font-size: 10vh;
 	text-transform: uppercase;
   font-weight: 900;
 	color: #2c3e5036;
@@ -207,6 +207,7 @@ transition: 0.4s all;
   border: 2px solid;
   padding: 10px;
   cursor: pointer;
+  font-size: 0.7vw;
 }
 .signup-btn{
   width: 240px;
@@ -238,6 +239,7 @@ transition: 0.4s all;
   border: 2px solid;
   padding: 10px;
   cursor: pointer;
+  font-size: 0.7vw;
 }
 
 .show-logout-btn{
@@ -250,6 +252,7 @@ transition: 0.4s all;
   border: 2px solid;
   padding: 10px;
   cursor: pointer;
+  font-size: 0.7vw;
 }
 
 .sign-up-btn {
