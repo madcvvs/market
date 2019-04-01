@@ -50,7 +50,6 @@ function showbuttons(){
 
 	<div id="header">
 		<h1><i class="far fa-money-bill-alt"></i> Market.com </h1>
-		<p id="timetosale"></p>
 		  <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Login</div>
       <div class="show-signup-btn"><i class="fas fa-sign-in-alt"></i> Signup</div>
       <div class="show-logout-btn"><i class="fas fa-sign-in-alt"></i> Logout</div>
@@ -150,7 +149,7 @@ if ( isset( $_SESSION['incorrect'] ) ) {
           </div>
 
 
-
+          <p id="timetosale"></p>
 
 
 
