@@ -499,7 +499,7 @@ transition: 0.4s all;
 /*Hat */
 .container{
   position: absolute;
-  top: 15%;
+  top: 142px;
   left: 65%;
   width:30%;
   transform: translate(-50%,-50%) rotateX(70deg);
@@ -534,13 +534,13 @@ transition: 0.4s all;
     border: 4px solid #8e44ad;
     background: #9b59b670;
     width:5%;
-    height:5vh;
+    height:10px;
   }
   to{
     border: 0px solid #8e44ad;
     background: #9b59b670;
     width: 140%;
-    height: 40vh;
+    height: 335px;
     top: 20px;
     opacity: 0;
   }
