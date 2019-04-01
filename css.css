@@ -586,10 +586,11 @@ transition: 0.4s all;
   50% { border-color: orange }
 }
 
-p {
+
+#timetosale{
   margin: 3vh 0 0 0;
   top: 850px;
-  left: 35%;
+  left: 40;
 	position: absolute;
 	text-align: center;
 	font-size: 200%;
