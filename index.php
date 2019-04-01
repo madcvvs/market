@@ -6,6 +6,7 @@
 <head>
 
 	<title>Market.com</title>
+	<link rel="shortcut icon" type="image/x-icon" href="logo.png"/>
 	<link rel="stylesheet" type="text/css" href="css.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
