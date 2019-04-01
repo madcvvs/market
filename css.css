@@ -585,3 +585,11 @@ transition: 0.4s all;
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
+
+p {
+	margin: 3vh 0 0 0;
+	position: absolute;
+	text-align: center;
+	font-size: 200%;
+	padding: 0;
+}
