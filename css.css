@@ -588,6 +588,7 @@ transition: 0.4s all;
 
 
 #timetosale{
+  width:100%;
   margin: 3vh 0 0 0;
   top: 850px;
   left: 40;
