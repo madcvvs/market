@@ -1,6 +1,9 @@
 *{
 	font-family: "montserrat",sans-serif;
 }
+
+
+
 body{
   margin: 0;
   padding: 0;
@@ -80,7 +83,15 @@ transition: 0.4s all;
   animation-timing-function: linear;
   -webkit-text-stroke-color: red;
   -webkit-text-stroke-width: 2.00px;
+
 }
+
+@media (max-width: 720px) {
+  #header h1 {
+  font-size: 40px;
+  }
+}
+
 
 @keyframes water {
 	from{
