@@ -280,7 +280,7 @@ transition: 0.4s all;
 
 .show-logout-btn{
   position: absolute;
-  left:90%;
+  right:10%;
   width: 90px;
   height: 20px;
   top:50px;

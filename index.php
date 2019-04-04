@@ -55,7 +55,7 @@ function showbuttons(){
       <div class="show-logout-btn"><i class="fas fa-sign-in-alt"></i> Logout</div>
   			<div class="sok">
    				<input type="text" name="" class="sok-txt" placeholder="Search..."/>
-   					<a class="sok-btn">
+   					<a class="sok-btn" onclick="sokButton()">
      					<i class="fas fa-search"></i>
    					</a>
   			</div>
@@ -193,17 +193,18 @@ if ( isset( $_SESSION['incorrect'] ) ) {
 $('.sok-txt').keyup(function(e){
     if(e.keyCode == 13)
     {
-        var sokOrd = $(".sok-txt").val();
-        console.log(sokOrd);
-
-        var width = 11 + "px"
-        console.log(width);
-
-        $(".typewriter").html("<div class='typewriter'> <h1>" + sokOrd + "</h1> </div>");
-        $('h1.typewriter').css("max-width", "11px");
+        sokButton();
     }
 });
 
+
+function sokButton(){
+	var sokOrd = $(".sok-txt").val();
+        console.log(sokOrd);
+
+        $(".typewriter").html("<div class='typewriter'> <h1>" + sokOrd + "</h1> </div>");
+
+}
 
 
 
