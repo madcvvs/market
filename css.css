@@ -1,4 +1,4 @@
-
+﻿
 *{
 	font-family: "montserrat",sans-serif;
 }
@@ -146,13 +146,13 @@ transition: 0.4s all;
 #content{
 	float:left;
 	width: 100%;
-	height: 900px;
+	height: 800px;
 }
 #footer{
 	float:left;
 	background-color: #692323;
 	width:100%;
-	height: 100px;
+	height: 80px;
 }
 .login-box{
   position: absolute;
