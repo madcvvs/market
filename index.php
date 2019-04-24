@@ -129,7 +129,7 @@ if ( isset( $_SESSION['incorrect'] ) ) {
             <span class="teeth1"></span>
             <span class="pusher"><img id="imageKujuk"></span>
             <span class="teeth2"></span>
-            <a href="" class="lip2"></a>
+            <a href="marknad.php" class="lip2"></a>
           </div>
 
 
