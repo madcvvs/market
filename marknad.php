@@ -54,6 +54,8 @@ function showbuttons(){
 
 
 
+</div>
+
   <?php
 session_start();
 $loginPage;
@@ -89,11 +91,6 @@ if ( isset( $_SESSION['incorrect'] ) ) {
 
 
 
-
-  <div class="typewriter">
-    <H1><?php echo $loginPage; ?></H1>
-  </div>
-
   <p id="timetosale"></p>
 
 
@@ -123,7 +120,11 @@ if ( isset( $_SESSION['incorrect'] ) ) {
 	</div>
 
 
-
+	<div id="content">
+		<div class="typewriter">
+	    <H1><?php echo $loginPage; ?></H1>
+	  </div>
+	</div>
 
 	<div id="footer">
     <h1 id="bitcoin"></h1>
