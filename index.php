@@ -205,7 +205,7 @@ function sokButton(){
     			  $( "#imageKujuk" ).attr("src","matttias.jpg");
             $( "#namn" ).html("NyDuschad Kujuk");
     			}
-           }, 100);
+           }, 0);
         }
     },
     function () {
@@ -214,10 +214,12 @@ function sokButton(){
             timeoutId = null;
         }
         else {
+          $( "#namn" ).html("");
+          timeutId = window.setTimeout(function() {
            $( "#imageKujuk" ).removeAttr("src");
            $("#imageKujuk").css("display", "none");
            $("#imageKujuk").css("height", "0%");
-           $( "#namn" ).html("");
+          }, 250);
         }
     });
     $(".show-login-btn").on("click",function(){
